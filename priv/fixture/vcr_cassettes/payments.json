@@ -1,0 +1,44 @@
+[
+  {
+    "request": {
+      "body": "<payment xmlns=\"http://www.elastic-payments.com/schema/payment\"><merchant-account-id>c5ba078a-861d-49fe-80b9-b880ba847fbd</merchant-account-id><request-id>test123</request-id><transaction-type>authorization</transaction-type><cryptogram><cryptogram-type>apple-pay</cryptogram-type><cryptogram-value>foo</cryptogram-value></cryptogram><payment-methods><payment-method name=\"creditcard\"/></payment-methods></payment>",
+      "headers": {
+        "accept": "application/xml",
+        "authorization": "Basic MTYzODQtVGVscmlhOk1HMjM2cVU2ODMtNjA1",
+        "content-type": "application/xml"
+      },
+      "method": "post",
+      "options": {
+        "httpc_options": [],
+        "http_options": {
+          "autoredirect": "false"
+        }
+      },
+      "request_body": "",
+      "url": "https://api-test.wirecard.com/engine/rest/payments"
+    },
+    "response": {
+      "binary": false,
+      "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><payment xmlns=\"http://www.elastic-payments.com/schema/payment\" xmlns:ns2=\"http://www.elastic-payments.com/schema/epa/transaction\"><merchant-account-id ref=\"https://api-test.wirecard.com/engine/rest/config/merchants/c5ba078a-861d-49fe-80b9-b880ba847fbd\">c5ba078a-861d-49fe-80b9-b880ba847fbd</merchant-account-id><request-id>test123</request-id><transaction-type>authorization</transaction-type><transaction-state>failed</transaction-state><statuses><status code=\"400.1102\" description=\"Digital signature validation failed.  Please ensure that you are using a valid key for signature generation.\" severity=\"error\"/></statuses><cryptogram><cryptogram-type>apple-pay</cryptogram-type><cryptogram-value>foo</cryptogram-value></cryptogram><payment-methods><payment-method name=\"creditcard\"/></payment-methods><api-id>elastic-api</api-id></payment>",
+      "headers": {
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "connection": "close",
+        "date": "Mon, 26 Feb 2018 16:43:52 GMT",
+        "pragma": "no-cache",
+        "content-language": "en-US",
+        "content-length": "897",
+        "content-type": "application/xml;charset=UTF-8",
+        "expires": "0",
+        "x-xss-protection": "1; mode=block",
+        "x-content-type-options": "nosniff",
+        "strict-transport-security": "max-age=16070400; includeSubDomains"
+      },
+      "status_code": [
+        "HTTP/1.1",
+        201,
+        "Created"
+      ],
+      "type": "ok"
+    }
+  }
+]
