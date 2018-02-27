@@ -43,7 +43,7 @@ defmodule ExWirecard.MixProject do
     # These are the default files included in the package
     [
       name: :ex_wirecard,
-      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      files: ["lib", "priv/hrl", "priv/xsd", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Jonatan Männchen"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/jshmrtn/ex-wirecard"}
