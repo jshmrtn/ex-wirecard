@@ -1,4 +1,6 @@
 defmodule ExWirecard.MixProject do
+  @moduledoc false
+
   use Mix.Project
 
   def project do
@@ -7,6 +9,8 @@ defmodule ExWirecard.MixProject do
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
       test_coverage: [tool: ExCoveralls],
       deps: deps(),
       dialyzer: [
@@ -26,6 +30,23 @@ defmodule ExWirecard.MixProject do
   def application do
     [
       extra_applications: [:logger]
+    ]
+  end
+
+  defp description do
+    """
+    API Wrapper for WireCard.
+    """
+  end
+
+  defp package do
+    # These are the default files included in the package
+    [
+      name: :ex_wirecard,
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      maintainers: ["Jonatan Männchen"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/jshmrtn/ex-wirecard"}
     ]
   end
 
