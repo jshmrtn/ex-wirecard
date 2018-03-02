@@ -500,7 +500,7 @@
 
 -record(cryptogram, {anyAttribs :: anyAttribs(),
 	'cryptogram-type' :: string(),
-	'cryptogram-value' :: string()}).
+	'cryptogram-value' :: string() | undefined}).
 
 -type cryptogram() :: #cryptogram{}.
 
