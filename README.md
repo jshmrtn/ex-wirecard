@@ -14,7 +14,7 @@ The package can be installed by adding `ex_wirecard` to your list of dependencie
 ```elixir
 def deps do
   [
-    {:ex_wirecard, "~> 0.1.0"}
+    {:ex_wirecard, "~> 0.1"}
   ]
 end
 ```
